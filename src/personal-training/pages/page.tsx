@@ -243,8 +243,8 @@ export default function HomePage() {
                             ?
                         </h2>
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-                            Laura usa un enfoque revolucionario para la longevidad y una salud óptima. Combinamos 
-                            pruebas personalizadas y asesoramiento experto para ayudarte a envejecer al revés.
+                            Entrenadora personal y futbolista profesional con más de 10 años de experiencia. He vivido el deporte con pasión y disciplina.
+                            Hoy, esa misma energía la pongo al servicio de quienes quieren cambiar su vida a través del movimiento, la constancia y el bienestar físico y mental.
                         </p>
                     </div>
 
@@ -252,22 +252,23 @@ export default function HomePage() {
                         {[
                             {
                                 icon: Target,
-                                title: "PRECISION TESTING",
+                                title: "PRUEBA DE PRECISIÓN",
                                 description:
-                                "Comprehensive biomarker analysis to understand your unique biological age and health markers.",
+                                "Análisis integral para comprender sus marcadores de salud.",
                                 gradient: "from-blue-500 to-cyan-500",
                             },
                             {
                                 icon: TrendingUp,
-                                title: "PERSONALIZED PROTOCOLS",
+                                title: "METODOS PERSONALIZADOS ",
                                 description:
-                                "Custom nutrition, exercise, and lifestyle interventions based on your specific test results.",
+                                "Intervenciones personalizadas de nutrición, ejercicio y estilo de vida según los resultados de sus pruebas específicas.",
                                 gradient: "from--500 to-emerald-500",
                             },
                             {
                                 icon: Award,
-                                title: "EXPERT GUIDANCE",
-                                description: "Work directly with longevity specialists and health optimization experts.",
+                                title: "ORIENTACIÓN PROFESIONAL",
+                                // description: "Con Nuestra guía se capacita y apoya a sus clientes para que descubran sus fortalezas, definan objetivos claros y desarrollen las habilidades necesarias para avanzar en su carrera. ",
+                                description: "Ayudamos a alcanzar sus metas a través de nuesta guia de desarrollo personalizado y orientado a resultados.",
                                 gradient: "from-purple-500 to-pink-500",
                             },
                         ].map((item, index) => (
@@ -300,11 +301,11 @@ export default function HomePage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 text-white">
-                            CÓMO{" "}
-                            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">FUNCIONA</span>
+                            CÓMO FUNCIONA TU{" "}
+                            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">ENTRENAMIENTO PERSONALIZADO</span>
                         </h2>
                             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                            Nuestro proceso probado de 4 pasos para optimizar su salud y extender su esperanza de vida.
+                            Nuestro proceso probado de 4 pasos para optimizar su salud y su calidad de vida.
                         </p>
                     </div>
 
@@ -312,23 +313,23 @@ export default function HomePage() {
                         {[
                             {
                                 step: "01",
-                                title: "CONSULTA",
-                                description: "Evaluación inicial y establecimiento de objetivos con nuestros expertos en longevidad.",
+                                title: "DIAGNOSTICO INICIAL",
+                                description: "Agendamos una primera sesión para conocerte: hablamos de tus metas, tu estado físico actual y tu disponibilidad. 📍 Puede ser presencial o virtual.",
                             },
                             {
                                 step: "02",
-                                title: "PRUEBAS",
-                                description: "Pruebas integrales de biomarcadores y análisis de salud.",
+                                title: "PLAN DE ENTRENAMIENTO A TU MEDIDA",
+                                description: "Diseño un plan 100% personalizado, adaptado a tu nivel (principiante, intermedio o avanzado) y objetivos: 💪 Tonificación, pérdida de peso, fuerza, resistencia, etc.",
                             },
                             {
                                 step: "03",
-                                title: "PROTOCOLO",
-                                description: "Plan de intervención personalizado en función de tus resultados.",
+                                title: "SEGUIMIENTO Y AJUSTES",
+                                description: "Durante el proceso estaré contigo: ✅ Te corrijo técnica, te motivo, hacemos ajustes según tus avances y emociones.",
                             },
                             {
                                 step: "04",
-                                title: "MEJORAMIENTO",
-                                description: "Monitoreo continuo y perfeccionamiento del protocolo.",
+                                title: "RESULTADOS REALES",
+                                description: "Con constancia, disciplina y el acompañamiento adecuado, los cambios llegan. Tú pones las ganas, yo te acompaño en el proceso.  ✨ ¿Estás lista/o?",
                             },
                         ].map((item, index) => (
                             <div key={index} className="text-center">
@@ -504,8 +505,8 @@ export default function HomePage() {
                         TU VIDA?
                     </h2>
                     <p className="text-xl sm:text-2xl text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto px-4">
-                        Únase a muchas mas personas que ya han descubierto el secreto para revertir el envejecimiento.
-                        Su camino hacia una salud óptima comienza con una sola consulta.
+                        Únete a muchas personas y Comienza hoy a construir el cuerpo y la mente que siempre has soñado, 
+                        Porque mereces sentirte fuerte, saludable y feliz cada día.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
