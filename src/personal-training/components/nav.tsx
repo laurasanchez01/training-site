@@ -78,7 +78,9 @@ export default function Navbar2() {
                 ))}
 
                 <div className="ml-4 xl:ml-8">
-                    <button className=" cursor-pointer relative px-4 xl:px-8 py-3 xl:py-4 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 text-white font-bold rounded-xl xl:rounded-2xl text-xs xl:text-sm overflow-hidden group transform hover:scale-105 transition-all duration-300 shadow-xl shadow-orange-500/25">
+                    <button 
+                        onClick={handleMakeConsultationClick} 
+                        className=" cursor-pointer relative px-4 xl:px-8 py-3 xl:py-4 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 text-white font-bold rounded-xl xl:rounded-2xl text-xs xl:text-sm overflow-hidden group transform hover:scale-105 transition-all duration-300 shadow-xl shadow-orange-500/25">
                         <span className="relative z-10 flex items-center">
                             PROGRAMAR CONSULTA
                         <div className="ml-2 xl:ml-3 w-4 h-4 xl:w-5 xl:h-5 rounded-full bg-white/20 flex items-center justify-center group-hover:rotate-90 transition-transform duration-300">
