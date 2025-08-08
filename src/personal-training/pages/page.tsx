@@ -16,12 +16,30 @@ import {
     Dumbbell,
     Users,
     Calendar,
+    Instagram,
 } from "lucide-react";
 
 import Navbar from "../components/nav"
 import { getWhatsAppLink } from "@/utils/wathsapp-link";
 import { getMakeConsultationLink } from "@/utils/codenly-link";
 import { ButtonInfo } from "@/components/button-info";
+import { Button } from "@/components/ui/button";
+
+const beforeAfterImages = [
+    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+]
+
+const instagramPosts = [
+    "/placeholder.svg?height=200&width=200",
+    "/placeholder.svg?height=200&width=200",
+    "/placeholder.svg?height=200&width=200",
+    "/placeholder.svg?height=200&width=200",
+    "/placeholder.svg?height=200&width=200",
+    "/placeholder.svg?height=200&width=200",
+]
 
 export default function HomePage() {
     const [, setScrollY] = useState(0)
@@ -228,7 +246,7 @@ export default function HomePage() {
             </section>
 
             {/* Responsive What is FitScript Section */}
-            <section id="what-is" className="px-3 sm:px-4 md:px-6 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-32 relative">
+            <section id="what-is-laura" className="px-3 sm:px-4 md:px-6 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-32 relative">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 sm:mb-20">
                         <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-orange-900/30 to-red-900/30 border border-orange-500/30 rounded-full text-xs sm:text-sm font-bold text-orange-300 mb-6 sm:mb-8 shadow-lg">
@@ -355,18 +373,21 @@ export default function HomePage() {
                             ÉXITO
                         </h2>
                         <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                            Nuestros Resultados reales de personas reales que han transformado su salud y longevidad.
+                            Transformaciones reales, con esfuerzo, disciplina y acompañamiento constante.
+                            Cada historia aquí representa más que un cambio físico: es una prueba de que sí se puede.
                         </p>
                     </div>
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                         {[
                             {
-                                name: "Michael R.",
-                                age: "52",
+                                name: "Norangel Riera",
+                                age: "35",
                                 result: "Edad biológica reducida en 8 años",
-                                quote:
-                                "Me siento mejor a los 52 que a los 40. El protocolo FitScript transformó por completo mi energía y vitalidad",
+                                quote: `Entrenar con Laura ha sido una de las mejores decisiones que he tomado. 
+                                Desde que empecé con ella, no solo he visto cambios físicos en mi cuerpo, sino que también me siento con más energía, motivación y seguridad. 
+                                Sus rutinas son personalizadas, exigentes pero muy efectivas, y lo mejor de todo es su actitud: siempre está allí para animarte, corregirte con cariño y retarte a dar lo mejor de ti. 
+                                Si estás buscando una entrenadora que realmente se preocupe por tu progreso y bienestar, ¡ella es la indicada! 💪✨`,
                             },
                             {
                                 name: "Sarah L.",
@@ -408,19 +429,59 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Premium Stats Section */}
-            <section className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-slate-800/70 backdrop-blur-xl">
+            {/* Before/After Gallery */}
+            <section className="py-24 px-6">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 text-center">
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 text-white">
+                            RESULTADOS{" "}
+                            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">REALES</span>
+                        </h2>
+                            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                            Transformaciones auténticas de mujeres que decidieron cambiar su vida
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {beforeAfterImages.map((images, index) => (
+                            <div key={index} className="group relative overflow-hidden bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20 
+                                    hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 rounded-3xl">
+                                <div className="relative h-80">
+                                <image
+                                    href={images.before || "/placeholder.svg"}
+                                    // alt={`Antes ${index + 1}`}
+                                    fill="true"
+                                    className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+                                />
+                                <image
+                                    href={images.after || "/placeholder.svg"}
+                                    // alt={`Después ${index + 1}`}
+                                    fill="true"
+                                    className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p className="font-bold">Antes → Después</p>
+                                </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+              {/* Premium Stats Section */}
+            <section className="px-4 sm:px-6 lg:px-12 py-10 sm:py-10 lg:py-10 ">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid sm:grid-cols-3 md:grid-cols-3 gap-8 lg:gap-12 text-center ">
                         {[
                             { number: "100+", label: "Clientes transformados", gradient: "from-slate-700 to-slate-800" },
-                            { number: "15+", label: "Años de reducción de edad promedio", gradient: "from-orange-500 to-red-600" },
                             { number: "98%", label: "Satisfacción del cliente", gradient: "from-slate-600 to-yellow-600" },
                             { number: "24/7", label: "Soporte de tiempo completo", gradient: "from-orange-500 to-red-600" },
                         ].map((stat, index) => (
                             <div key={index} className="relative group">
                                 <div
-                                className={`text-4xl sm:text-5xl font-bold text-white mb-4 ${stat.gradient} rounded-2xl p-4 shadow-lg shadow-black/20 
+                                className={`bg-slate-800/80 backdrop-blur-xl text-4xl sm:text-5xl font-bold text-white mb-4 ${stat.gradient} rounded-2xl p-4 shadow-lg shadow-black/20 
                                     group-hover:shadow-2xl group-hover:shadow-yellow-500/10 transition-all duration-500 group-hover:-translate-y-2`}
                                 >
                                 {stat.number}
@@ -429,6 +490,60 @@ export default function HomePage() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* Instagram Section */}
+            <section className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-slate-800/70 backdrop-blur-xl">
+                <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-20">
+                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 text-white">
+                        <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                            Sígueme en{" "}
+                        </span>
+                        Instagram
+                    </h2>
+                    <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-5">
+                        Contenido diario de entrenamientos, tips y motivación
+                    </p>
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="https://www.instagram.com/laurasanchezcoach" target="_blank" rel="noopener noreferrer">
+                            <Button className=" bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-5 
+                                rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500 border-white border-2">
+                                <Instagram className="w-5 h-5 mr-2" />
+                                <span className="font-bold">@laurasanchezcoach</span>
+                            </Button>
+                        </a>
+                        <a href="https://www.tiktok.com/@laurasanchezcoach" target="_blank" rel="noopener noreferrer">
+                            <Button className=" bg-black text-white px-8 py-5 rounded-full transition-all duration-300 hover:scale-105 border-2 border-cyan-400 
+                                hover:shadow-lg hover:shadow-cyan-400/50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" 
+                                    strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 mr-2">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+                                </svg>
+                                <span className="font-bold">@laurasanchezcoach</span>
+                            </Button>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {instagramPosts.map((post, index) => (
+                        <div key={index} className="relative aspect-square overflow-hidden rounded-3xl group cursor-pointer bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20 
+                                    hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 ">
+                            <image
+                            href={post || "/placeholder.svg"}
+                            // alt={`Instagram post ${index + 1}`}
+                            fill="true"
+                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-[#FF6B6B]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <Instagram className="w-8 h-8 text-white" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
                 </div>
             </section>
 

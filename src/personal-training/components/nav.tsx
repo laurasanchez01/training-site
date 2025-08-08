@@ -12,7 +12,7 @@ import {
 import { getMakeConsultationLink } from "@/utils/codenly-link";
 
 
-export default function Navbar2() {
+export default function Navbar() {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -26,7 +26,7 @@ export default function Navbar2() {
 
     const handleMakeConsultationClick = () => {
             const link = getMakeConsultationLink();
-            closeMobileMenu
+            closeMobileMenu();
             window.open(link, '_blank');
         }
 
@@ -61,7 +61,7 @@ export default function Navbar2() {
             {/* Desktop Navigation - Hidden on mobile/tablet */}
             <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
                 {[
-                    { to: "#what-is", label: "QUIEN ES LAURA" },
+                    { to: "#what-is-laura", label: "QUIEN ES LAURA" },
                     { to: "#how-it-works", label: "CÓMO TRABAJA" },
                     { to: "#success", label: "ÉXITOS" },
                     { to: "#team", label: "NUESTRO EQUIPO" },
