@@ -43,6 +43,7 @@ export default function Navbar() {
                     <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-slate-800 via-gray-900
                         to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center transform group-hover:scale-110
                             group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-orange-500/25">
+                        {/* <image src={"/favicon.png"} alt="Logo" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" /> */}
                         <Sparkles className="text-white w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                     </div>
                     <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-br from-yellow-400/30 to-slate-800/30 rounded-xl sm:rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -52,7 +53,7 @@ export default function Navbar() {
                         LAURA SANCHEZ
                     </span>
                     <span className="text-xs text-orange-500 font-medium tracking-[0.1em] sm:tracking-[0.2em] sm:text-xs sm:font-bold"> {/* hidden sm:block */}
-                        COACH & PERSONAL TRAINER
+                        COACH <span className="text-white">&</span>  PERSONAL <span className="text-white">TRAINER</span>
                     </span>
                 </div>
                 </Link>
@@ -64,18 +65,19 @@ export default function Navbar() {
                     { to: "#what-is-laura", label: "QUIEN ES LAURA" },
                     { to: "#how-it-works", label: "CÓMO TRABAJA" },
                     { to: "#success", label: "ÉXITOS" },
-                    { to: "#team", label: "NUESTRO EQUIPO" },
+                    { to: "#prices", label: "PRECIOS", },
                 ].map((item, index) => (
-                    <Link
+                    <a
                         key={index}
-                        to={item.to}
+                        href={item.to}
                         className="relative px-3 xl:px-5 py-2 xl:py-3 text-xs xl:text-sm font-semibold text-gray-700 hover:text-gray-900 transition-all duration-300 group rounded-xl xl:rounded-2xl"
                     >
                         <span className="relative z-10 text-gray-200 hover:text-white">{item.label}</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/20 to-red-900/20 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300 shadow-md"></div>
                         <div className="absolute bottom-1 left-1/2 w-0 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full group-hover:w-6 xl:group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></div>
-                    </Link>
+                    </a>
                 ))}
+                
 
                 <div className="ml-4 xl:ml-8">
                     <button 
@@ -123,48 +125,48 @@ export default function Navbar() {
             >
             <div className="bg-black/95 backdrop-blur-2xl border-b border-gray-800/50 shadow-2xl shadow-black/40">
                 <div className="px-3 sm:px-4 md:px-6 py-6 sm:py-8">
-                <div className="flex flex-col space-y-1 sm:space-y-2">
-                    {[
-                        { to: "#what-is", label: "QUIEN ES LAURA", delay: "delay-75", icon: Target  },
-                        { to: "#how-it-works", label: "CÓMO TRABAJA", delay: "delay-100", icon: Activity },
-                        { to: "#success", label: "ÉXITOS", delay: "delay-150", icon: Star },
-                        { to: "#team", label: "NUESTRO EQUIPO", delay: "delay-200", icon: Award },
-                    ].map((item, index) => (
-                        <Link
-                            key={index}
-                            to={item.to}
-                            className={`relative px-4 sm:px-6 py-4 sm:py-5 text-sm sm:text-base font-semibold text-gray-300 hover:text-white transition-all duration-300 group rounded-xl sm:rounded-2xl hover:bg-gradient-to-r hover:from-orange-900/20 hover:to-red-900/20 ${isMobileMenuOpen ? `animate-fade-in-up ${item.delay}` : ""}`}
-                            onClick={closeMobileMenu}
-                        >
-                            <span className="flex items-center justify-between">
-                            <div className="flex items-center">
-                                <item.icon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-orange-500" />
-                                {item.label}
-                            </div>
-                            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-orange-600" />
-                            </span>
-                        </Link>
-                    ))}
-
-                    <div className={`pt-4 sm:pt-6 ${isMobileMenuOpen ? "animate-fade-in-up delay-300" : ""}`}>
-                        <button
-                            className=" cursor-pointer w-full relative px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-orange-500 via-orange-600
-                                to-red-600 text-white font-bold rounded-xl sm:rounded-2xl text-sm sm:text-base overflow-hidden group shadow-xl shadow-orange-500/25"
-                            onClick={handleMakeConsultationClick}
-                        >
-                            <span className="relative z-10 flex items-center justify-center">
-                                <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                                    PROGRAMAR CONSULTA
-                                <div className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 flex items-center justify-center group-hover:rotate-90 transition-transform duration-300">
-                                    <ArrowRight className="w-2 h-2 sm:w-3 sm:h-3" />
+                    <div className="flex flex-col space-y-1 sm:space-y-2">
+                        {[
+                            { to: "#what-is-laura", label: "QUIEN ES LAURA", delay: "delay-75", icon: Target  },
+                            { to: "#how-it-works", label: "CÓMO TRABAJA", delay: "delay-100", icon: Activity },
+                            { to: "#success", label: "ÉXITOS", delay: "delay-150", icon: Star },
+                            { to: "#prices", label: "PRECIOS", delay: "delay-200", icon: Award },
+                        ].map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.to}
+                                className={`relative px-4 sm:px-6 py-4 sm:py-5 text-sm sm:text-base font-semibold text-gray-300 hover:text-white transition-all duration-300 group rounded-xl sm:rounded-2xl hover:bg-gradient-to-r hover:from-orange-900/20 hover:to-red-900/20 ${isMobileMenuOpen ? `animate-fade-in-up ${item.delay}` : ""}`}
+                                onClick={closeMobileMenu}
+                            >
+                                <span className="flex items-center justify-between">
+                                <div className="flex items-center">
+                                    <item.icon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-orange-500" />
+                                    {item.label}
                                 </div>
-                            </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                        </button>
+                                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-orange-600" />
+                                </span>
+                            </a>
+                        ))}
+
+                        <div className={`pt-4 sm:pt-6 ${isMobileMenuOpen ? "animate-fade-in-up delay-300" : ""}`}>
+                            <button
+                                className=" cursor-pointer w-full relative px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-orange-500 via-orange-600
+                                    to-red-600 text-white font-bold rounded-xl sm:rounded-2xl text-sm sm:text-base overflow-hidden group shadow-xl shadow-orange-500/25"
+                                onClick={handleMakeConsultationClick}
+                            >
+                                <span className="relative z-10 flex items-center justify-center">
+                                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                                        PROGRAMAR CONSULTA
+                                    <div className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 flex items-center justify-center group-hover:rotate-90 transition-transform duration-300">
+                                        <ArrowRight className="w-2 h-2 sm:w-3 sm:h-3" />
+                                    </div>
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                            </button>
+                        </div>
+                    </div>
                     </div>
                 </div>
-                </div>
-            </div>
             </div>
         </nav>
     );

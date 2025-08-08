@@ -127,23 +127,24 @@ export default function HomePage() {
                             alt="Laura sanchez coach personal trainer"
                             width={600}
                             height={700}
-                            className="relative object-cover rounded-2xl sm:rounded-3xl w-full h-auto max-h-[400px] sm:max-h-[600px] 
+                            className="relative object-cover rounded-2xl sm:rounded-2xl w-full h-auto max-h-[400px] sm:max-h-[600px] 
                             md:max-h-[600px] lg:max-h-none shadow-xl sm:shadow-2xl shadow-gray-900/10 group-hover:scale-105 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent rounded-2xl sm:rounded-3xl"></div>
+                        <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 via-transparent to-transparent rounded-3xl"></div>
 
                         {/* Responsive Floating Stats */}
                         <div className="absolute top-4 sm:top-8 right-4 sm:right-8 bg-white/90 backdrop-blur-xl rounded-xl 
                             sm:rounded-2xl p-3 sm:p-4 shadow-xl shadow-gray-900/10 animate-float">
-                            <div className="text-lg sm:text-2xl font-bold text-orange-600">98%</div>
-                        <div className="text-xs text-gray-600">Tasa de éxito</div>
+                            <div className="text-2xl font-bold text-orange-600">98%</div>
+                            <div className="text-xs text-gray-600">Tasa de éxito</div>
                         </div>
 
                         <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 bg-white/90 backdrop-blur-xl rounded-xl 
                             sm:rounded-2xl p-3 sm:p-4 shadow-xl shadow-gray-900/10 animate-float delay-1000">
-                            <div className="text-lg sm:text-2xl font-bold text-gray-800">Mas de 100</div>
-                            <div className="text-xs text-gray-600">Clientes Satisfechos </div>
+                            <div className="text-2xl font-bold text-gray-800">+100</div>
+                            <div className="text-xs text-gray-600">Clientes Satisfechos</div>
                         </div>
+
                     </div>
                 </div>
 
@@ -205,15 +206,15 @@ export default function HomePage() {
                         {/* Responsive Trust Indicators */}
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 text-xs sm:text-sm text-gray-400">
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500" />
+                                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
                                 <span>Consulta gratuita</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500" />
+                                <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
                                 <span>100% Confidencial</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500" />
+                                <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
                                 <span>Garantía de 30 días</span>
                             </div>
                         </div>
@@ -548,7 +549,7 @@ export default function HomePage() {
             </section>
 
             {/* Premium Our Team Section */}
-            <section id="team" className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-black/80 backdrop-blur-xl">
+            <section id="prices" className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-black/80 backdrop-blur-xl">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 text-white">
