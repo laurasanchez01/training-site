@@ -25,20 +25,30 @@ import { getMakeConsultationLink } from "@/utils/codenly-link";
 import { ButtonInfo } from "@/components/button-info";
 import { Button } from "@/components/ui/button";
 
+// const beforeAfterImages = [
+//     { before: "/images/image.png", after: "/images/image.png" },
+//     { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+//     { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+//     { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+// ]
+
 const beforeAfterImages = [
-    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
-    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
-    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
-    { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
+    { image: "/images/resultados1.webp"},
+    { image: "/images/resultados2.webp"},
+    { image: "/images/resultados3.webp"},
+    { image: "/placeholder.svg?height=300&width=200"},
 ]
 
 const instagramPosts = [
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
-    "/placeholder.svg?height=200&width=200",
+    "/images/insta9.webp",
+    "/images/insta1.webp",
+    "/images/insta2.webp",
+    "/images/insta3.webp",
+    "/images/insta4.webp",
+    "/images/insta5.webp",
+    "/images/insta6.webp",
+    "/images/insta7.webp",
+    "/images/insta8.webp",
 ]
 
 export default function HomePage() {
@@ -391,11 +401,11 @@ export default function HomePage() {
                                 Si estás buscando una entrenadora que realmente se preocupe por tu progreso y bienestar, ¡ella es la indicada! 💪✨`,
                             },
                             {
-                                name: "Sarah L.",
-                                age: "45",
-                                result: "Perdí 30 libras, gané masa muscular.",
+                                name: "Amanda Rey",
+                                age: "25",
+                                result: "Gané masa muscular.",
                                 quote:
-                                "El enfoque personalizado marcó la diferencia. Por fin, un programa que realmente funciona para mi cuerpo .",
+                                "Llevo 6 meses entrenando con Laura y con tan solo 1 mes pude ver los cambios en mi cuerpo. Además de ser una entrenadora totalmente capacitada para atender todas las solicitudes y dudas que se presentan, es súper dedica y amable. 100% recomendada ✅.",
                             },
                             {
                                 name: "David K.",
@@ -439,27 +449,30 @@ export default function HomePage() {
                             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">REALES</span>
                         </h2>
                             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                            Transformaciones auténticas de mujeres que decidieron cambiar su vida
+                            Transformación de personas que decidieron cambiar su vida.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {beforeAfterImages.map((images, index) => (
+                        {beforeAfterImages.map((item, index) => (
                             <div key={index} className="group relative overflow-hidden bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20 
                                     hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 rounded-3xl">
                                 <div className="relative h-80">
-                                <image
-                                    href={images.before || "/placeholder.svg"}
-                                    // alt={`Antes ${index + 1}`}
-                                    fill="true"
-                                    className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+                                <img
+                                    src={item.image || "/placeholder.svg"}
+                                    alt={`Antes ${index + 1}`}
+                                    // fill={true}
+                                    className="object-fit w-full h-full rounded-3xl p-2 transition-transform duration-300 group-hover:scale-105"
                                 />
-                                <image
-                                    href={images.after || "/placeholder.svg"}
-                                    // alt={`Después ${index + 1}`}
-                                    fill="true"
+                                {/* <img
+                                    src={images.after || "/placeholder.svg"}
+                                    // width={200}
+                                    // height={300}
+                                    alt={`Después ${index + 1}`}
+                                    // fill="true"
                                     className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                                />
+                                    sizes="(max-width: 1024px) 50vw, 25vw"
+                                /> */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <p className="font-bold">Antes → Después</p>
@@ -533,12 +546,12 @@ export default function HomePage() {
                     {instagramPosts.map((post, index) => (
                         <div key={index} className="relative aspect-square overflow-hidden rounded-3xl group cursor-pointer bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20 
                                     hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 ">
-                            <image
-                            href={post || "/placeholder.svg"}
-                            // alt={`Instagram post ${index + 1}`}
-                            fill="true"
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
-                            />
+                            <img
+                                src={post || "/placeholder.svg"}
+                                alt={`Instagram post ${index + 1}`}
+                                // fill="true"
+                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                                />
                             <div className="absolute inset-0 bg-[#FF6B6B]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <Instagram className="w-8 h-8 text-white" />
                             </div>
@@ -548,7 +561,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Premium Our Team Section */}
+            {/* prices Section */}
             <section id="prices" className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-black/80 backdrop-blur-xl">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
@@ -566,7 +579,7 @@ export default function HomePage() {
                             {
                                 name: "Entrenamiento 1:1",
                                 title: "Sesiones personalizadas adaptadas a tus objetivos específicos",
-                                price: 80,
+                                price: 120,
                                 gradient: "from-blue-500 to-cyan-500",
                                 icon: <Dumbbell className="w-15 h-15" />
                             },
@@ -610,7 +623,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Premium CTA Section */}
+            {/* end Section */}
             <section className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-black/80 backdrop-blur-xl">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 text-white">
