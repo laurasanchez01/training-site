@@ -408,11 +408,13 @@ export default function HomePage() {
                                 "Llevo 6 meses entrenando con Laura y con tan solo 1 mes pude ver los cambios en mi cuerpo. Además de ser una entrenadora totalmente capacitada para atender todas las solicitudes y dudas que se presentan, es súper dedica y amable. 100% recomendada ✅.",
                             },
                             {
-                                name: "David K.",
-                                age: "38",
-                                result: "Sueño y recuperación optimizados",
+                                name: "Aneceth.",
+                                age: "35",
+                                result: "La disciplina es la clave ✨",
                                 quote:
-                                "Mi calidad de sueño mejoró drásticamente y ahora mi tiempo de recuperación es la mitad de lo que solía ser",
+                                `Bajé 5kg en 3 meses y lo mejor de todo es q no tengo flacidez, la actividad física constante y la alimentación saludable son la combinación perfecta para lograr los resultados.
+                                Me siento más enérgica, con mayor motivación, me aumentò el autoestima y me siento mejor conmigo misma, me gusta como me veo y como me siento.
+                                Estoy feliz con los resultados`,
                             },
                         ].map((story, index) => (
                             <Card
