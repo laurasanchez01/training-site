@@ -521,15 +521,15 @@ export default function HomePage() {
                         Contenido diario de entrenamientos, tips y motivación
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <a href="https://www.instagram.com/laurasanchezcoach" target="_blank" rel="noopener noreferrer">
-                            <Button className=" bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-5 
+                        <a href="https://www.instagram.com/laura_csg_10" target="_blank" rel="noopener noreferrer">
+                            <Button className="cursor-pointer bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-5 
                                 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500 border-white border-2">
                                 <Instagram className="w-5 h-5 mr-2" />
                                 <span className="font-bold">@laurasanchezcoach</span>
                             </Button>
                         </a>
-                        <a href="https://www.tiktok.com/@laurasanchezcoach" target="_blank" rel="noopener noreferrer">
-                            <Button className=" bg-black text-white px-8 py-5 rounded-full transition-all duration-300 hover:scale-105 border-2 border-cyan-400 
+                        <a href="https://www.tiktok.com/@laurasanchezgon1" target="_blank" rel="noopener noreferrer">
+                            <Button className="cursor-pointer bg-black text-white px-8 py-5 rounded-full transition-all duration-300 hover:scale-105 border-2 border-cyan-400 
                                 hover:shadow-lg hover:shadow-cyan-400/50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" 
                                     strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 mr-2">
@@ -544,7 +544,7 @@ export default function HomePage() {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {instagramPosts.map((post, index) => (
-                        <div key={index} className="relative aspect-square overflow-hidden rounded-3xl group cursor-pointer bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20 
+                        <div key={index} className="relative aspect-square overflow-hidden rounded-3xl group bg-slate-800/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20 
                                     hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 ">
                             <img
                                 src={post || "/placeholder.svg"}
