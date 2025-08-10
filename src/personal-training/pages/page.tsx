@@ -133,10 +133,10 @@ export default function HomePage() {
                         <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-orange-400/90 to-red-400/70 rounded-2xl 
                             sm:rounded-2xl blur-xl sm:blur-2xl group-hover:blur-2xl sm:group-hover:blur-3xl transition-all duration-500"></div>
                         <img
-                            src="/images/lau-full.webp"
+                            src="/images/principal3.webp"
                             alt="Laura sanchez coach personal trainer"
-                            width={600}
-                            height={700}
+                            width={692}
+                            height={692}
                             className="relative object-cover rounded-2xl sm:rounded-2xl w-full h-auto max-h-[400px] sm:max-h-[600px] 
                             md:max-h-[600px] lg:max-h-none shadow-xl sm:shadow-2xl shadow-gray-900/10 group-hover:scale-105 transition-transform duration-700"
                         />
