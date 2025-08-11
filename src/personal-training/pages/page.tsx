@@ -17,6 +17,7 @@ import {
     Users,
     Calendar,
     Instagram,
+    MapPinCheck,
 } from "lucide-react";
 
 import Navbar from "../components/nav"
@@ -36,7 +37,7 @@ const beforeAfterImages = [
     { image: "/images/resultados1.webp"},
     { image: "/images/resultados2.webp"},
     { image: "/images/resultados3.webp"},
-    { image: "/placeholder.svg?height=300&width=200"},
+    { image: "/images/resultados4.webp"},
 ]
 
 const instagramPosts = [
@@ -81,8 +82,13 @@ export default function HomePage() {
         return () => window.removeEventListener("unhandledrejection", handleUnhandled)
     }, [])
 
-    const handleWhatsAppClick = () => {
-        const message = 'Hola Laura, quiero que seas mi personal trainer. Cuando empezamos pues?'; // Mensaje que quieres enviar
+    const handleOpenSite = (link: string) => {
+        window.open(link, "_blank")
+    }
+
+    const handleWhatsAppClick = (messageUser?: string): void => {
+        let message = 'Hola Laura, quiero que seas mi personal trainer. Cuando empezamos pues?'; // Mensaje que quieres enviar
+        if (messageUser) { message = messageUser; }
         const phoneNumber = '573242874190'; // Número de teléfono al que deseas enviar el mensaje
 
         const whatsappUrl = getWhatsAppLink(phoneNumber, message);
@@ -183,7 +189,7 @@ export default function HomePage() {
                             <button className="cursor-pointer group relative px-6 sm:px-8 md:px-10 py-4 sm:py-5 bg-gradient-to-r from-orange-500 via-orange-600
                                 to-red-600 text-white font-bold rounded-xl sm:rounded-2xl text-base sm:text-lg overflow-hidden transform hover:scale-105
                                 transition-all duration-300 shadow-2xl shadow-orange-500/25"
-                                onClick={handleWhatsAppClick} >
+                                onClick={() => handleWhatsAppClick()} >
                                 <span className="relative z-10 flex items-center justify-center">
                                     {/* <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2" /> */}
                                     <svg  xmlns="http://www.w3.org/2000/svg"  
@@ -238,31 +244,36 @@ export default function HomePage() {
                     COMO APARECE EN
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-16 opacity-60 hover:opacity-80 transition-opacity duration-300">
-                    <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold tracking-wider text-gray-300 hover:text-orange-500 transition-colors duration-300">
-                        Tik-Tok
+                    <div className="cursor-pointer text-sm sm:text-lg md:text-xl lg:text-2xl font-bold tracking-wider text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                        <a href="https://www.tiktok.com/@laurasanchezgon1" target="_blank" rel="noopener noreferrer"> 
+                            Tik-Tok
+                        </a>
                     </div>
-                    <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-serif italic text-gray-300 hover:text-orange-500 transition-colors duration-300">
-                        Instagram
+                    <div className="cursor-pointer text-sm sm:text-lg md:text-xl lg:text-2xl font-serif italic text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                        <a href="https://www.instagram.com/laura_csg_10" target="_blank" rel="noopener noreferrer"> 
+                            Instagram
+                        </a>
                     </div>
-                    <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-300 hover:text-orange-500 transition-colors duration-300">
-                        Facebook
+                    <div className="cursor-pointer text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                        <a href="https://www.facebook.com/share/1B7sp3v2ZG/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"> 
+                            Facebook
+                        </a>
                     </div>
-                    <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light text-gray-300 hover:text-orange-500 transition-colors duration-300">
-                        Youtube
-                    </div>
-                    <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light text-gray-300 hover:text-orange-500 transition-colors duration-300">
-                        LinkedIn
+                    <div className="cursor-pointer text-sm sm:text-lg md:text-xl lg:text-2xl font-light text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                        <a href="https://m.youtube.com/@laurasanchez-ft7wm" target="_blank" rel="noopener noreferrer"> 
+                            Youtube
+                        </a>
                     </div>
                 </div>
             </section>
 
-            {/* Responsive What is FitScript Section */}
+            {/* Responsive What is Laura Section */}
             <section id="what-is-laura" className="px-3 sm:px-4 md:px-6 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-32 relative">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16 sm:mb-20">
                         <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-orange-900/30 to-red-900/30 border border-orange-500/30 rounded-full text-xs sm:text-sm font-bold text-orange-300 mb-6 sm:mb-8 shadow-lg">
                             <Target className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                            Nuestro enfoque revolucionario
+                            Nuestro enfoque integral
                         </div>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 sm:mb-8 text-white">
                             PORQUE ELEGIR A{" "}
@@ -291,7 +302,7 @@ export default function HomePage() {
                                 title: "METODOS PERSONALIZADOS ",
                                 description:
                                 "Intervenciones personalizadas de nutrición, ejercicio y estilo de vida según los resultados de sus pruebas específicas.",
-                                gradient: "from--500 to-emerald-500",
+                                gradient: "from-500 to-emerald-500",
                             },
                             {
                                 icon: Award,
@@ -325,7 +336,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Premium How It Works Section */}
+            {/* How It Works Section */}
             <section id="how-it-works" className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-slate-800/70 backdrop-blur-xl">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
@@ -353,7 +364,7 @@ export default function HomePage() {
                             {
                                 step: "03",
                                 title: "SEGUIMIENTO Y AJUSTES",
-                                description: "Durante el proceso estaré contigo: ✅ Te corrijo técnica, te motivo, hacemos ajustes según tus avances y emociones.",
+                                description: "Durante el proceso estaré contigo: ✅ Te corrijo técnica, te motivo, hacemos ajustes según tus avances y objetivos.",
                             },
                             {
                                 step: "04",
@@ -373,7 +384,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Premium Success Stories Section */}
+            {/* Success Stories Section */}
             <section id="success" className="px-4 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 bg-slate-800/70 backdrop-blur-xl">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
@@ -393,7 +404,7 @@ export default function HomePage() {
                         {[
                             {
                                 name: "Norangel Riera",
-                                age: "35",
+                                age: "35 Años",
                                 result: "Edad biológica reducida en 8 años",
                                 quote: `Entrenar con Laura ha sido una de las mejores decisiones que he tomado. 
                                 Desde que empecé con ella, no solo he visto cambios físicos en mi cuerpo, sino que también me siento con más energía, motivación y seguridad. 
@@ -402,14 +413,14 @@ export default function HomePage() {
                             },
                             {
                                 name: "Amanda Rey",
-                                age: "25",
+                                age: "25 Años",
                                 result: "Gané masa muscular.",
                                 quote:
                                 "Llevo 6 meses entrenando con Laura y con tan solo 1 mes pude ver los cambios en mi cuerpo. Además de ser una entrenadora totalmente capacitada para atender todas las solicitudes y dudas que se presentan, es súper dedica y amable. 100% recomendada ✅.",
                             },
                             {
                                 name: "Aneceth.",
-                                age: "35",
+                                age: "35 Años",
                                 result: "La disciplina es la clave ✨",
                                 quote:
                                 `Bajé 5kg en 3 meses y lo mejor de todo es q no tengo flacidez, la actividad física constante y la alimentación saludable son la combinación perfecta para lograr los resultados.
@@ -442,7 +453,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Before/After Gallery */}
+            {/* Results Gallery */}
             <section className="py-24 px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
@@ -486,7 +497,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-              {/* Premium Stats Section */}
+              {/* Stats Section */}
             <section className="px-4 sm:px-6 lg:px-12 py-10 sm:py-10 lg:py-10 ">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid sm:grid-cols-3 md:grid-cols-3 gap-8 lg:gap-12 text-center ">
@@ -583,6 +594,10 @@ export default function HomePage() {
                                 title: "Sesiones personalizadas adaptadas a tus objetivos específicos",
                                 price: 120,
                                 gradient: "from-blue-500 to-cyan-500",
+                                site: 'Gimnasio Smart Fit Metro Itagüí',
+                                city: 'Itagüí',
+                                mapsite: 'https://maps.app.goo.gl/Ph148tPzDdmUbnUr9',
+                                message: 'Hola Laura, quiero que seas mi personal trainer entrenamiento 1:1. Cuando empezamos pues?',
                                 icon: <Dumbbell className="w-15 h-15" />
                             },
                             {
@@ -590,6 +605,10 @@ export default function HomePage() {
                                 title: "Seguimiento virtual con planes de entrenamiento personalizados",
                                 price: 150,
                                 gradient: "from--500 to-emerald-500",
+                                site: '',
+                                city: '',
+                                mapsite: '',
+                                message: 'Hola Laura, quiero que seas mi personal trainer mediante asesoría online. Cuando empezamos pues?',
                                 icon: <Users className="w-15 h-15" />
                             },
                             {
@@ -597,6 +616,10 @@ export default function HomePage() {
                                 title: "Un programa completo de 12 semanas con nutrición incluida",
                                 price: 300,
                                 gradient: "from-purple-500 to-pink-500",
+                                site: '',
+                                city: '',
+                                mapsite: '',
+                                message: 'Hola Laura, quiero que seas mi personal trainer mediante un plan personalizado. Cuando empezamos pues?',
                                 icon: <Calendar className="w-15 h-15" />
                             },
                         ].map((member, index) => (
@@ -616,8 +639,16 @@ export default function HomePage() {
                                     </div>
                                     <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white">{member.name}</h3>
                                     <p className="text-orange-500/80 mb-4">{member.title}</p>
-                                    <p className="text-gray-300 text-xl sm:text-base leading-relaxed mb-6">{index === 0 ? `Desde $${member.price}/sesión` : `Desde $${member.price}/mes`}</p>
-                                    < ButtonInfo handleWhatsAppClick={handleWhatsAppClick}/>
+                                    <p className="text-gray-300 text-xl sm:text-base leading-relaxed mb-6">{index === 0 ? `Desde $${member.price} - 12 sesiones` : `Desde $${member.price}/mes`}</p>
+                                    
+                                    {
+                                        (index === 0) && (
+                                            <p className="mb-4 mt-0 flex items-center gap-2 cursor-pointer" onClick={ () => handleOpenSite(member.mapsite) }>
+                                                <MapPinCheck size={20} className="text-cyan-500"/> <span className="text-gray-400 text-sm sm:text-base leading-relaxed">{member.site}, {member.city}</span>
+                                            </p>
+                                        )
+                                    }
+                                    < ButtonInfo handleWhatsAppClick={() => handleWhatsAppClick(member.message)}/>
                                 </CardContent>
                             </Card>
                         ))}
