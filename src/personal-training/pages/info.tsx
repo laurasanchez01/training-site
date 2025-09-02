@@ -34,36 +34,36 @@ export const InfoPage = () => {
                     
 
                     {/* <!-- Instagram --> */}
-                    <a href="https://instagram.com/laurasacnhez" target="_blank"
+                    <a href="https://www.instagram.com/laura_csg_10" target="_blank"
                         className="social-buttons bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-600 "
                         aria-label="Instagram" title="Ir a Instagram de @laurasacnhez">
                         <Instagram size={32} className=" text-amber-50"/>
                     </a>
                     
                     {/* <!-- YouTube --> */}
-                    <a href="https://youtube.com/@laurasacnhez" target="_blank"
+                    <a href="https://m.youtube.com/@laurasanchez-ft7wm" target="_blank"
                         className="bg-white social-buttons"
-                        aria-label="YouTube" title="Ir a YouTube de @laurasacnhez">
+                        aria-label="YouTube" title="Ir a YouTube de laura sanchez">
                         <Youtube size={32} className="text-red-600" />
                     </a>
                     
-                    {/* <!-- X (Twitter) --> */}
-                    <a href="https://x.com/laurasacnhez" target="_blank"
+                    {/* <!--Tik tok (Twitter) --> */}
+                    <a href="https://www.tiktok.com/@laurasanchezgon1" target="_blank"
                         className="bg-black social-buttons"
-                        aria-label="X" title="Ir a X de @laurasacnhez">
+                        aria-label="tiktok" title="Ir a tiktok de laura sanchez">
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="32"  height="32"  viewBox="0 0 24 24"  fill="currentColor"  className="icon icon-tabler icons-tabler-filled icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.083 2h-4.083a1 1 0 0 0 -1 1v11.5a1.5 1.5 0 1 1 -2.519 -1.1l.12 -.1a1 1 0 0 0 .399 -.8v-4.326a1 1 0 0 0 -1.23 -.974a7.5 7.5 0 0 0 1.73 14.8l.243 -.005a7.5 7.5 0 0 0 7.257 -7.495v-2.7l.311 .153c1.122 .53 2.333 .868 3.59 .993a1 1 0 0 0 1.099 -.996v-4.033a1 1 0 0 0 -.834 -.986a5.005 5.005 0 0 1 -4.097 -4.096a1 1 0 0 0 -.986 -.835z" /></svg>
                     </a>
         
-                    {/* <!-- LinkedIn --> */}
-                    <a href="https://facebook.com/laurasacnhez" target="_blank"
+                    {/* <!-- Facebook --> */}
+                    <a href="https://www.facebook.com/share/1B7sp3v2ZG/?mibextid=wwXIfr" target="_blank"
                         className="bg-white social-buttons"
-                        aria-label="LinkedIn" title="Ir a LinkedIn de @laurasacnhez">
+                        aria-label="LinkedIn" title="Ir a LinkedIn de laura sanchez">
                         <Facebook size={32} className="text-sky-600" />
                     </a>
 
-                    <a href="https://twitch.tv/laurasacnhez" target="_blank"
+                    <a href="https://twitch.tv/laurasachezcoach" target="none"
                         className="bg-purple-100 social-buttons "
-                        aria-label="Twitch" title="Ir a Twitch de @laurasacnhez">
+                        aria-label="Twitch" title="Ir a Twitch de laura sanchez">
                         <Twitch size={32} className="text-purple-600"/>
                     </a>
 
@@ -79,8 +79,8 @@ export const InfoPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2  gap-8">
                     <div className="col-span-1 rounded-3xl overflow-hidden relative min-h-[350px] flex items-end p-4 md:p-8 transition-transform duration-300 hover:scale-105 group">
                         <img src="/images/info-lau-2.webp" alt="Laura Sanchez" className="absolute inset-0 w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <p className="relative z-10 text-lg md:text-2xl font-bold text-white max-w-3xl">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <p className="relative z-10 text-md md:text-2xl font-bold text-white max-w-3xl">
                             Soy Laura Sánchez, entrenadora personal y futbolista profesional, apasionada por transformar vidas a través del movimiento, la disciplina y la motivación.
                         </p>
                     </div>
