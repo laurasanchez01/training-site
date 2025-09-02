@@ -1,4 +1,6 @@
-import { Facebook, Instagram, Twitch, Youtube } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Facebook, Instagram, Link2, Twitch, Youtube } from "lucide-react";
+import { Link } from "react-router";
 
 export const InfoPage = () => {
     return (
@@ -6,7 +8,7 @@ export const InfoPage = () => {
             <header className="text-white">
                 
                 <img src="/images/info-laura.jpg" alt="Logo de laurasacnhez" 
-                className="w-full object-cover h-[400px] sm:h-full mask-radial-at-center mask-radial-from-60% mask-b-from-80% mask-t-from-80% mask-l-from-80% mask-r-from-90%"/>
+                className="w-full object-cover h-[440px] sm:h-full mask-radial-at-center mask-radial-from-60% mask-b-from-80% mask-t-from-80% mask-l-from-80% mask-r-from-90%"/>
 
                 <header className="flex flex-col justify-center items-center gap-1 mb-8 -mt-6">
 
@@ -75,7 +77,7 @@ export const InfoPage = () => {
                 </section>
             </header>
 
-            <main className="p-4 pb-16 text-amber-50 px-4">
+            <main className="p-4  text-amber-50 px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2  gap-8">
                     <div className="col-span-1 rounded-3xl overflow-hidden relative min-h-[350px] flex items-end p-4 md:p-8 transition-transform duration-300 hover:scale-105 group">
                         <img src="/images/info-lau-2.webp" alt="Laura Sanchez" className="absolute inset-0 w-full h-full object-cover" />
@@ -116,6 +118,20 @@ export const InfoPage = () => {
                     </div>
                 </div>
             </main>
+
+            <footer>
+                <div className="text-center my-12">
+                    <Link to="/">
+                        <Button 
+                            size="lg" 
+                            className="bg-gradient-to-r from-blue-500 to-blue-400 text-white font-bold text-lg py-6 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
+                        >
+                            <Link2 className="mr-2 h-6 w-6" size={32}/>
+                            Página Principal
+                        </Button>
+                    </Link>
+                </div>
+            </footer>
         </div>
     );
 };
