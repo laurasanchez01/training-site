@@ -601,3 +601,8 @@ body {
     max-width: 1536px;
   }
 }
+
+.social-buttons {
+    @apply p-2 size-12 sm:size-16 flex items-center justify-center rounded-full
+        hover:scale-110 transition-transform;
+}

@@ -26,13 +26,6 @@ import { getMakeConsultationLink } from "@/utils/codenly-link";
 import { ButtonInfo } from "@/components/button-info";
 import { Button } from "@/components/ui/button";
 
-// const beforeAfterImages = [
-//     { before: "/images/image.png", after: "/images/image.png" },
-//     { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
-//     { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
-//     { before: "/placeholder.svg?height=300&width=200", after: "/placeholder.svg?height=300&width=200" },
-// ]
-
 const beforeAfterImages = [
     { image: "/images/resultados1.webp"},
     { image: "/images/resultados2.webp"},
